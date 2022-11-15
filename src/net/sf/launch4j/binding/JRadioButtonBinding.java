@@ -96,7 +96,7 @@ public class JRadioButtonBinding implements Binding {
 		try {
 			for (int i = 0; i < _buttons.length; i++) {
 				if (_buttons[i].isSelected()) {
-					PropertyUtils.setProperty(bean, _property, new Integer(i));
+					PropertyUtils.setProperty(bean, _property, Integer.valueOf(i));
 					return;
 				}
 			}

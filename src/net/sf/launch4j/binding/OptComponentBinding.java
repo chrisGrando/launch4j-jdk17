@@ -100,7 +100,7 @@ public class OptComponentBinding implements Binding, ActionListener {
 	public void get(IValidatable bean) {
 		try {
 			PropertyUtils.setProperty(bean, _property, _button.isSelected()
-					? _clazz.newInstance() : null);
+					? _clazz.getDeclaredConstructor().newInstance() : null);
 		} catch (Exception e) {
 			throw new BindingException(e);
 		}

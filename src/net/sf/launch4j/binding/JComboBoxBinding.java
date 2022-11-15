@@ -89,7 +89,7 @@ public class JComboBoxBinding<T> implements Binding {
 
 	public void get(IValidatable bean) {
 		try {
-			PropertyUtils.setProperty(bean, _property, new Integer(_combo.getSelectedIndex()));
+			PropertyUtils.setProperty(bean, _property, Integer.valueOf(_combo.getSelectedIndex()));
 			return;
 		} catch (Exception e) {
 			throw new BindingException(e);
