@@ -7,7 +7,7 @@
   <stayAlive>false</stayAlive>
   <jre>
   	<path>%JAVA_HOME%;%PATH%</path>
-    <minVersion>1.8.0</minVersion>
+    <minVersion>17</minVersion>
   </jre>
   <versionInfo>
     <fileDescription>Cross-platform Java application wrapper</fileDescription>

@@ -81,7 +81,7 @@ public class Main {
 	}
 
 	private static void setDescription(Properties props) {
-		_name = "Launch4j " + props.getProperty("version"); 
+		_name = "Launch4j ~ JDK 17 Edition - v" + props.getProperty("version"); 
 		_description = _name + 
 				" (http://launch4j.sourceforge.net/)\n" +
 				"Cross-platform Java application wrapper" +

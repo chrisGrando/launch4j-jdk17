@@ -9,7 +9,7 @@
   <restartOnCrash>true</restartOnCrash>
   <jre>
   	<path>%JAVA_HOME%;%PATH%</path>
-    <minVersion>1.8.0</minVersion>
+    <minVersion>17</minVersion>
   </jre>
   <splash>
     <file>splash.bmp</file>

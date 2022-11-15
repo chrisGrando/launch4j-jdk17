@@ -20,7 +20,9 @@
 	</target>
 
 	<target name="compile" depends="init" description="compile the source">
-		<javac srcdir="${src}" destdir="${build}" classpathref="dist.classpath" source="1.8" debug="on" includeantruntime="false" />
+		<javac srcdir="${src}" destdir="${build}" classpathref="dist.classpath" source="17" debug="on" includeantruntime="false">
+			<compilerarg value="-Xlint:deprecation" />
+		</javac>
 		<copy todir="${build}/images">
 			<fileset dir="${src}/images">
 				<include name="**/*" />
