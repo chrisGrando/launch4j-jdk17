@@ -1,14 +1,21 @@
 @echo off
-cd %cd%
-set LocalDir=%cd%
-set LineBreak=____________________________________________________________________________________
+cd %CD%
+set LOCALDIR=%CD%
+set LINEBREAK=____________________________________________________________________________________
 
 :: Java
-set JAVA_HOME=%LocalDir%\jdk
-set PATH=%LocalDir%\jdk\bin;%PATH%
+set JAVA_HOME=%LOCALDIR%\jdk
+set PATH=%LOCALDIR%\jdk\bin;%PATH%
+echo %LINEBREAK% & echo JAVA JDK VERSION & echo %LINEBREAK%
 java -version
 
+:: Ant
+set ANT_HOME=%LOCALDIR%\ant
+set PATH=%LOCALDIR%\ant\bin;%PATH%
+echo %LINEBREAK% & echo APACHE ANT VERSION & echo %LINEBREAK%
+call ant -version
+
 :: Build Launch4j
-echo %LineBreak% & echo "Building Launch4j..."
+echo %LINEBREAK% & echo BUILDING LAUNCH4J & echo %LINEBREAK%
 call ant -buildfile build.xml clean compile jar
 pause

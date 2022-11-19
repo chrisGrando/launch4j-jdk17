@@ -4,11 +4,30 @@ set LOCALDIR=%CD%
 set LINEBREAK=____________________________________________________________________________________
 
 :: Java
+if exist %LOCALDIR%\jre\bin\ (
+	:: Set path to JRE
+	echo USING JRE & ECHO %LINEBREAK%
+	goto JRE
+	
+) else (
+	:: Set path to JDK
+	echo USING JDK & ECHO %LINEBREAK%
+	goto JDK
+)
+
+:JRE
+set JAVA_HOME=%LOCALDIR%\jre
+set PATH=%LOCALDIR%\jre\bin;%PATH%
+java -version
+goto ARGS
+
+:JDK
 set JAVA_HOME=%LOCALDIR%\jdk
 set PATH=%LOCALDIR%\jdk\bin;%PATH%
 java -version
 
 :: Arguments
+:ARGS
 if "%~1"=="" (
 	:: If there's no parameters, launch application GUI.
 	goto GUI
