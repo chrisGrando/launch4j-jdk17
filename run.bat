@@ -1,6 +1,5 @@
 @echo off
-cd %CD%
-set LOCALDIR=%CD%
+set LOCALDIR=%~dp0
 set LINEBREAK=____________________________________________________________________________________
 
 :: Java
@@ -8,7 +7,6 @@ if exist %LOCALDIR%\jre\bin\ (
 	:: Set path to JRE
 	echo USING JRE & ECHO %LINEBREAK%
 	goto JRE
-	
 ) else (
 	:: Set path to JDK
 	echo USING JDK & ECHO %LINEBREAK%

@@ -1,6 +1,5 @@
 @echo off
-cd %CD%
-set LOCALDIR=%CD%
+set LOCALDIR=%~dp0
 set LINEBREAK=____________________________________________________________________________________
 
 :: Java
