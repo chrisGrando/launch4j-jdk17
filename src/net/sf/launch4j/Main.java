@@ -86,6 +86,8 @@ public class Main {
 				" (http://launch4j.sourceforge.net/)\n" +
 				"Cross-platform Java application wrapper" +
 						" for creating Windows native executables.\n\n" +
+				"* Original software by: Grzegorz Kowal.\n" +
+				"* JDK 17 Edition by: @chrisGrando.\n\n" +
 				"Copyright (C) 2004, 2022 Grzegorz Kowal\n\n" +
 				"Launch4j comes with ABSOLUTELY NO WARRANTY.\n" +
 				"This is free software, licensed under the BSD License.\n" +
